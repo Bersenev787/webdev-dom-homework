@@ -4,7 +4,9 @@ import {
   renderCommentsFromAPI,
   setCommentInput
 } from './comments.js';
-import { loginAPI, getUsersAPI, registerUserAPI, deleteCommentViaAPI } from './api.js';
+import { deleteCommentViaAPI, toggleLikeViaAPI } from './comments-api.js';
+import { loginAPI, registerUserAPI } from './auth-api.js';
+import { getUsersAPI } from './users-api.js';
 
 // Массив комментариев
 let commentsData = [];

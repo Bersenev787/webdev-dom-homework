@@ -1,7 +1,7 @@
 // comments.js
-import { getCommentsFromAPI, addCommentViaAPI } from './api.js';
+import { getCommentsFromAPI, addCommentViaAPI } from './comments-api.js';
 
-let commentInput; 
+let commentInput = ''; 
 
 export function setCommentInput(inputElement) {
   commentInput = inputElement;

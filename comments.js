@@ -127,7 +127,7 @@ export async function renderCommentsFromAPI(commentsData) {
 export async function addCommentViaAPIWrapper(commentsData, nameInputValue, commentInputValue) {
     const author = nameInputValue.trim();
     const text = commentInputValue.trim();
-  
+
     if (!author) {
       alert("Пожалуйста, укажите ваше имя.");
       return;
@@ -136,19 +136,19 @@ export async function addCommentViaAPIWrapper(commentsData, nameInputValue, comm
       alert("Пожалуйста, напишите комментарий.");
       return;
     }
-  
+
     try {
       const newComment = {
         text,
         name: author,
       };
-  
+
       // Проверка наличия интернет-соединения
       const isOnline = navigator.onLine;
       if (!isOnline) {
         throw new Error("Кажется, у вас сломался интернет, попробуйте позже");
       }
-  
+
       await addCommentViaAPI(newComment);
       commentInput.value = "";
       nameInputValue = "";

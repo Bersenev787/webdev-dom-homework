@@ -1,3 +1,4 @@
+// comments-api.js
 import { apiHost, apiHostVersion, apiHostUser } from './api.js'
 const token = JSON.parse(localStorage.getItem('token'));
 
